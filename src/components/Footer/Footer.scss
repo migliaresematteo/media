@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--bg-main);
+    color: white;
+    padding: 4rem 0;
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .social-link {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border: 1px solid white;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    }
+
+    .copyright {
+        opacity: 0.7;
+        font-size: 0.9rem;
+    }
+}

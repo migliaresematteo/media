@@ -1,0 +1,27 @@
+.pageHeader {
+    background-size: 50px 50px, 50px 50px;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+
+    header {
+        position: relative;
+    }
+}
+
+.header-content {
+    .header-cta {
+        display: block;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: 1px solid white;
+        width: max-content;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    }
+}

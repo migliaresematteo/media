@@ -1,0 +1,55 @@
+.mission-section {
+    padding: 4rem 0;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+
+    .mission-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .mission-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+
+            &:before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    .mission-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        text-align: center;
+
+        .stat-item {
+            background: var(--bg-adding);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+                color: var(--accent-color);
+            }
+
+            p {
+                margin: 0;
+                opacity: 0.8;
+            }
+        }
+    }
+}

@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap");
+html {
   min-height: 100vh;
+  font-size: 16px;
+}
+html body {
+  background-color: #161618;
+}
+html body .navbarLogo {
+  width: 3rem;
+}
+html body .pageHeader {
+  background: radial-gradient(circle at top left, hsla(52, 80%, 60%, 0.2) 0%, hsla(52, 80%, 60%, 0.1) 30%, transparent 60%), radial-gradient(circle at bottom right, hsla(0, 0%, 100%, 0.2) 0%, hsla(0, 0%, 100%, 0.1) 30%, transparent 60%);
+  background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px; /* Solo la griglia ripete a 50px */
+  min-height: 100vh;
+  margin: 0;
+}
+
+.w-max {
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+.underline {
+  border-bottom: 5px solid;
+  border-color: transparent;
+  border-image-source: linear-gradient(90deg, rgb(9, 155, 111), rgb(10, 13, 1));
+  border-image-slice: 1;
+}
+
+.qs {
+  font-size: 4rem; /* Adatta secondo necessità */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 300%);
+  -webkit-background-clip: text; /* Clipping del background per il testo */
+  -webkit-text-fill-color: transparent; /* Riempie il testo con il gradiente */
+  -webkit-text-stroke: 1px rgb(255, 255, 255); /* Contorno nero di 1px */
+  text-align: center; /* Centrare il testo */
+}
+
+.media-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.media-column img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem; /* mantiene l'angolo arrotondato */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-accent {
+  background-color: rgb(26, 122, 93) !important;
 }
+
+.bg-main {
+  background-color: #2d2d2c !important;
+}
+
+.accent {
+  color: rgb(21, 92, 71) !important;
+}
+
+.bg-light-custom {
+  background-color: rgba(222, 224, 222, 0.5137254902);
+}
+
+.bg-info-custom {
+  background-color: rgba(139, 171, 231, 0.368627451);
+}
+
+.text-info-custom {
+  color: #2155bc;
+}
+
+.blur {
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+
+.h-max {
+  height: inherit;
+}
+
+.title {
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}/*# sourceMappingURL=App.css.map */

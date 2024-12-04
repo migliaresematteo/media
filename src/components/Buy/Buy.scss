@@ -1,0 +1,15 @@
+.buy-link {
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    width: max-content;
+    text-decoration: none;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        color: white;
+    }
+}

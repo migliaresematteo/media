@@ -1,0 +1,10 @@
+.video-section {
+    background-color: var(--bg-main);
+    color: white;
+
+    .video-container {
+        background-color: var(--bg-adding);
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+}
