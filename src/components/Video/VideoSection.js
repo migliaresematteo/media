@@ -1,7 +1,5 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser, faBagShopping, faTrophy, faSquare } from '@fortawesome/free-solid-svg-icons';
 function VideoSection({ videoSrc }) {
     return (
         <section className="bg-main text-light">

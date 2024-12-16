@@ -1,0 +1,87 @@
+.lesson-header {
+    min-height: 50vh;
+    background: radial-gradient(circle at top left, hsla(52, 80%, 60%, 0.2) 0%, hsla(52, 80%, 60%, 0.102) 30%, transparent 60%),
+                radial-gradient(circle at bottom right, hsla(0, 0%, 100%, 0.2) 0%, hsla(0, 0%, 100%, 0.1) 30%, transparent 60%);
+}
+
+.lesson-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: radial-gradient(circle 50px at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(255, 255, 255, 0.06), transparent 100%);
+}
+
+.lesson-header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    mask-image: radial-gradient(circle 150px at var(--cursor-x, 50%) var(--cursor-y, 50%), black, transparent);
+    -webkit-mask-image: radial-gradient(circle 150px at var(--cursor-x, 50%) var(--cursor-y, 50%), black, transparent);
+}
+
+.back-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 1;
+    color: var(--text-primary);
+    transform: translateX(-5px);
+}
+
+.lesson-content {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 50vh;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.tip-box {
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.tip-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tip-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tip-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.lesson-meta {
+    color: var(--text-primary);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}

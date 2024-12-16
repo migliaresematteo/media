@@ -5,19 +5,29 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recha
 const MediaTokenomics = () => {
 const tokenomicsData = [
     { 
-    category: 'Total Supply', 
-    value: 1000,
-    color: '#ebd54733'
+        category: 'Marketing', 
+        value: 0.02,
+        color: '#FF6B6B'  // Coral red
     },
     { 
-    category: 'Creator Reserves', 
-    value: 20,
-    color: '#ebd5471a'
+        category: 'Rewards', 
+        value: 0.01,
+        color: '#4ECDC4'  // Turquoise
+    },
+    { 
+        category: 'Merchandise', 
+        value: 0.01,
+        color: '#96CEB4'  // Sage green
+    },
+    { 
+    category: 'Devs Wallet', 
+    value: 0.03,
+    color: '#9D65C9'  // Purple
     },
     { 
     category: 'Community Allocation', 
-    value: 980,
-    color: '#FFBB28'
+    value: 0.93,
+    color: '#FFBB28'  // Keeping original yellow for largest segment
     }
 ];
 
@@ -33,7 +43,7 @@ const CustomTooltip = ({ active, payload }) => {
         borderRadius: '5px'
         }}>
         <p style={{fontWeight: 'bold', color: 'black'}}>{data.category}</p>
-        <p style={{color: 'gray'}}>{data.value} million tokens</p>
+        <p style={{color: 'gray'}}>{data.value} billion tokens</p>
         </div>
     );
     }
@@ -41,7 +51,7 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 return (
-    <div id="tokenomics" className='bg-main'>
+    <div id="tokenomics" className='py-5'>
     <Container>
         <Card data-aos="fade-up" text="white" className="text-center bg-transparent border-0">
         <Card.Header className='border-0'>
@@ -103,7 +113,7 @@ return (
                         }}
                     />
                     <span style={{fontWeight: 'bold'}}>{item.category}</span>
-                    <p className="mt-2">{item.value} million tokens</p>
+                    <p className="mt-2">{item.value} billion tokens</p>
                     </Card.Body>
                 </Card>
                 ))}

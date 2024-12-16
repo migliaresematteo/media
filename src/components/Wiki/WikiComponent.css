@@ -1,0 +1,91 @@
+.wiki-section {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+.featured-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.course-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.course-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.topics-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.topics-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.topics-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge.beginner {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+}
+
+.badge.intermediate {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.badge.advanced {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #dc3545;
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}

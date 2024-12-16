@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.mission-section {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+.mission-section .mission-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+.mission-section .mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mission-section .mission-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.mission-section .mission-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+.mission-section .mission-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.mission-section .mission-stats .stat-item {
+  background: var(--bg-adding);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.mission-section .mission-stats .stat-item h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+.mission-section .mission-stats .stat-item p {
+  margin: 0;
+  opacity: 0.8;
+}
+.mission-section .mission-cards .mission-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mission-section .mission-cards .mission-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.mission-section .mission-cards .mission-card .mission-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.mission-section .mission-cards .mission-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+}
+.mission-section .mission-cards .mission-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .mission-section .mission-cards .mission-card {
+    min-height: auto;
+    margin-bottom: 1rem;
+  }
+}/*# sourceMappingURL=MediaMissionComponent.css.map */

@@ -1,57 +1,52 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
-// Layout Components
-import Layout from './layouts/MainLayout';
-
-// Components
-import HeaderComponent from './components/Header/HeaderComponent';
-import NavbarComponent from './components/Navigation/NavbarComponent';
-import TweetSection from './components/Social/TweetSection';
-import VideoSection from './components/Video/VideoSection';
-import MediaMissionComponent from './components/Mission/MediaMissionComponent';
-import Roadmap from './components/Roadmap/Roadmap';
-import MediaTokenomics from './components/Tokenomics/Tokenomics';
-import MediaTokenBuySection from './components/Buy/Buy';
-import Footer from './components/Footer/Footer';
-
-// Constants and Data
-import { NAVIGATION_LINKS } from './constants/navigation';
-import { MOCK_TWEETS } from './data/mockData';
-import { HEADER_CONTENT } from './constants/content';
-
-// Assets
-import vid from './assets/vid.mp4';
-import elonPic from './assets/kPL61o0F_400x400.jpg'
-import tweetIMG1 from './assets/GSifwV9bQAAeEaG.jpeg'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faTrophy, faRoad, faCoins, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGraduationCap, faHome } from '@fortawesome/free-solid-svg-icons';
+import Home from './pages/Home';
+import Wiki from './pages/Wiki';
+import LessonTemplate from './pages/LessonTemplate';
+import Footer from './components/Footer/Footer';
+import ScrollToTop from './ScrollToTop';
+import './App.css';
+import Landing from './components/Landing/Landing';
 
 function App() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
-    <Layout>
-      <NavbarComponent 
-        navLinks={NAVIGATION_LINKS}        
-      />
-      <HeaderComponent 
-        content={HEADER_CONTENT}        
-      />
-      <MediaMissionComponent />
-      <MediaTokenBuySection />
-      <Roadmap />
-      <MediaTokenomics />
-      <VideoSection videoSrc={vid} />
-      <TweetSection tweets={MOCK_TWEETS} />
-      <Footer />
-    </Layout>
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <Navbar expand="lg" className="blur border-bottom border-1 border-light py-3 fixed-top w-100 transition-all" variant="dark">
+          <Container>
+            <Navbar.Brand as={Link} to="/" className="text-light d-flex justify-content-center align-items-center">
+            <span><b>$media</b><span className="opacity-50"> on Solana</span></span>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ms-auto">
+                <Nav.Link as={Link} to="/" className="text-light nav-link-hover">
+                <FontAwesomeIcon icon={faHome} className="me-2" />
+                  Home
+                </Nav.Link>
+                <Nav.Link as={Link} to="/wiki" className="text-light nav-link-hover">
+                  <FontAwesomeIcon icon={faGraduationCap} className="me-2" />
+                  Learn
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/wiki" element={<Wiki />} />
+          <Route path="/wiki/:lessonId" element={<LessonTemplate />} />
+          <Route path="/landing" element={<Landing />} />
+        </Routes>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

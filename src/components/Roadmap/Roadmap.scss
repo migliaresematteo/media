@@ -1,90 +1,161 @@
 .roadmap-section {
-    padding: 4rem 0;
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+    color: white;
+    position: relative;
+    overflow: hidden;
 
     .roadmap-timeline {
         position: relative;
-        max-width: 800px;
-        margin: 0 auto;
+        padding: 2rem 0;
 
-        &:before {
+        &::before {
             content: '';
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             width: 2px;
             height: 100%;
-            background: var(--bg-adding);
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            &::before {
+                left: 30px;
+            }
         }
     }
 
     .roadmap-item {
+        margin-bottom: 4rem;
         position: relative;
-        margin-bottom: 3rem;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
 
-        .phase-marker {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-color);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-
-            .phase {
-                position: absolute;
-                top: -25px;
-                white-space: nowrap;
-                font-weight: bold;
-                color: var(--accent-color);
-            }
+        &:last-child {
+            margin-bottom: 0;
         }
 
-        .content {
+        .roadmap-content {
             width: 45%;
-            padding: 1.5rem;
-            background: var(--bg-adding);
-            border-radius: 0.5rem;
-            margin-left: 55%;
+            margin-left: auto;
+            position: relative;
 
-            h3 {
-                margin-bottom: 1rem;
-                color: var(--accent-color);
+            &::before {
+                content: '';
+                position: absolute;
+                left: -55px;
+                top: 30px;
+                width: 50px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.1);
             }
 
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
+            .quarter-badge {
+                position: absolute;
+                left: -85px;
+                top: 15px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
 
-                li {
-                    margin-bottom: 0.5rem;
-                    padding-left: 1.5rem;
-                    position: relative;
+                .icon {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.25rem;
+                }
 
-                    &:before {
-                        content: "•";
-                        position: absolute;
-                        left: 0;
-                        color: var(--accent-color);
-                    }
+                span {
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    position: absolute;
+                    bottom: -25px;
+                    white-space: nowrap;
+                }
+            }
+
+            .content-box {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 1rem;
+                padding: 2rem;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    background: rgba(255, 255, 255, 0.15);
+                    border-color: rgba(255, 255, 255, 0.2);
+                }
+
+                h3 {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    color: white;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: rgba(255, 255, 255, 0.8);
+                    margin: 0;
                 }
             }
         }
 
-        &:nth-child(even) {
-            .content {
+        &:nth-child(odd) {
+            .roadmap-content {
                 margin-left: 0;
-                margin-right: 55%;
+                margin-right: auto;
+
+                &::before {
+                    left: auto;
+                    right: -55px;
+                }
+
+                .quarter-badge {
+                    left: auto;
+                    right: -85px;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-content {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+
+                &::before {
+                    left: -50px;
+                    width: 45px;
+                }
+
+                .quarter-badge {
+                    left: -80px;
+                }
+
+                &:nth-child(odd) {
+                    margin-left: 80px;
+                    margin-right: 0;
+
+                    &::before {
+                        left: -50px;
+                        right: auto;
+                    }
+
+                    .quarter-badge {
+                        left: -80px;
+                        right: auto;
+                    }
+                }
             }
         }
     }

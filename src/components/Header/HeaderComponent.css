@@ -1,0 +1,40 @@
+.pageHeader {
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  background-image: none !important;
+}
+.pageHeader header {
+  position: relative;
+}
+.pageHeader header h1, .pageHeader header h2, .pageHeader header h3, .pageHeader header h4, .pageHeader header h5, .pageHeader header h6 {
+  color: white;
+  opacity: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content .header-cta {
+  display: block;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.header-content .header-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    --cursor-x: none !important;
+    --cursor-y: none !important;
+  }
+  .pageHeader::before, .pageHeader::after {
+    display: none !important;
+  }
+}/*# sourceMappingURL=HeaderComponent.css.map */

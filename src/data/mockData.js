@@ -1,32 +1,32 @@
 import elonPic from '../assets/kPL61o0F_400x400.jpg';
-import tweetIMG1 from '../assets/GSifwV9bQAAeEaG.jpeg';
+import tweetIMG1 from '../assets/elon1.jpeg';
 
 export const MOCK_TWEETS = [
   {
     name: "Elon Musk",
     username: "elonmusk",
     profileImage: elonPic,
-    text: "The media landscape is changing. $media is revolutionizing how we consume and interact with content on the blockchain.",
-    date: "Feb 15, 2024",
+    text: "You, the people, should decide the narrative, not 3 editors of legacy media",
+    date: "Nov 30, 2024",
     media: tweetIMG1,
-    url: "https://x.com/elonmusk/status/example"
+    url: "https://x.com/elonmusk/status/1862842627680350492?s=46"
   },
   {
     name: "Elon Musk",
     username: "elonmusk",
     profileImage: elonPic,
-    text: "Decentralization is the future. $media is building the infrastructure for a more open media ecosystem.",
-    date: "Feb 16, 2024",
+    text: "The legacy media forgot that honesty really is the best policy. Now you are the media.",
+    date: "Nov 25, 2024",
     media: tweetIMG1,
-    url: "https://x.com/elonmusk/status/example"
+    url: "https://x.com/elonmusk/status/1861115222783889589?s=46"
   },
   {
     name: "Elon Musk",
     username: "elonmusk",
     profileImage: elonPic,
-    text: "Breaking traditional media monopolies, one blockchain at a time. $media is leading the charge.",
-    date: "Feb 17, 2024",
+    text: "You are so much more than the media now",
+    date: "Nov 28, 2024",
     media: tweetIMG1,
-    url: "https://x.com/elonmusk/status/example"
+    url: "https://x.com/elonmusk/status/1862145513879134445?s=46"
   }
 ];

@@ -35,7 +35,7 @@ return (
             rel="noopener noreferrer" 
             className="mx-auto d-block text-light py-2 px-4 border border-1 border-light w-max text-decoration-none"
             >
-            DEX Scanner
+            DexScreener
             </a>
         </Col>
         <Col md={4} className="text-center text-md-end">

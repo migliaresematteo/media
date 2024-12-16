@@ -1,0 +1,16 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.gradientText {
+  background: linear-gradient(90deg, #2196f3 0%, #1976d2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+}
